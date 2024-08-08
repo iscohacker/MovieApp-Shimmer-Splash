@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MovieAppSimple</string>
+    <string name="kino_nomi">Kino nomi</string>
+    <string name="kino_qo_shish">Kino qo\'shish</string>
+</resources>

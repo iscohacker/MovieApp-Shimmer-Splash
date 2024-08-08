@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="#00BBD3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Kinolar"
+            android:textColor="@color/white"
+            android:textSize="27sp" />
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="350dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/add" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:shimmer_duration="2000">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#EDEDED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#D5D5D5"
+                    android:text="Movien Name"
+                    android:textColor="#D5D5D5"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="47dp"
+                    android:background="#D5D5D5"
+                    android:text="Authors Movie"
+                    android:textColor="#D5D5D5"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D5D5D5"
+                    android:text="12.12.2022"
+                    android:textColor="#D5D5D5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="Tahrirlash"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="O'chirish"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#EDEDED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#D5D5D5"
+                    android:text="Movien Name"
+                    android:textColor="#D5D5D5"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="47dp"
+                    android:background="#D5D5D5"
+                    android:text="Authors Movie"
+                    android:textColor="#D5D5D5"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D5D5D5"
+                    android:text="12.12.2022"
+                    android:textColor="#D5D5D5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="Tahrirlash"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="O'chirish"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#EDEDED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#D5D5D5"
+                    android:text="Movien Name"
+                    android:textColor="#D5D5D5"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="47dp"
+                    android:background="#D5D5D5"
+                    android:text="Authors Movie"
+                    android:textColor="#D5D5D5"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D5D5D5"
+                    android:text="12.12.2022"
+                    android:textColor="#D5D5D5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="Tahrirlash"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="O'chirish"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#EDEDED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#D5D5D5"
+                    android:text="Movien Name"
+                    android:textColor="#D5D5D5"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="47dp"
+                    android:background="#D5D5D5"
+                    android:text="Authors Movie"
+                    android:textColor="#D5D5D5"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D5D5D5"
+                    android:text="12.12.2022"
+                    android:textColor="#D5D5D5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="Tahrirlash"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="O'chirish"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#EDEDED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#D5D5D5"
+                    android:text="Movien Name"
+                    android:textColor="#D5D5D5"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="47dp"
+                    android:background="#D5D5D5"
+                    android:text="Authors Movie"
+                    android:textColor="#D5D5D5"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D5D5D5"
+                    android:text="12.12.2022"
+                    android:textColor="#D5D5D5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="Tahrirlash"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="O'chirish"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#EDEDED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#D5D5D5"
+                    android:text="Movien Name"
+                    android:textColor="#D5D5D5"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="47dp"
+                    android:background="#D5D5D5"
+                    android:text="Authors Movie"
+                    android:textColor="#D5D5D5"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D5D5D5"
+                    android:text="12.12.2022"
+                    android:textColor="#D5D5D5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="Tahrirlash"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="O'chirish"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#EDEDED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#D5D5D5"
+                    android:text="Movien Name"
+                    android:textColor="#D5D5D5"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="47dp"
+                    android:background="#D5D5D5"
+                    android:text="Authors Movie"
+                    android:textColor="#D5D5D5"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D5D5D5"
+                    android:text="12.12.2022"
+                    android:textColor="#D5D5D5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="Tahrirlash"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="O'chirish"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#EDEDED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#D5D5D5"
+                    android:text="Movien Name"
+                    android:textColor="#D5D5D5"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="47dp"
+                    android:background="#D5D5D5"
+                    android:text="Authors Movie"
+                    android:textColor="#D5D5D5"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D5D5D5"
+                    android:text="12.12.2022"
+                    android:textColor="#D5D5D5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="Tahrirlash"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="O'chirish"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#EDEDED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#D5D5D5"
+                    android:text="Movien Name"
+                    android:textColor="#D5D5D5"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="47dp"
+                    android:background="#D5D5D5"
+                    android:text="Authors Movie"
+                    android:textColor="#D5D5D5"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D5D5D5"
+                    android:text="12.12.2022"
+                    android:textColor="#D5D5D5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="Tahrirlash"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="O'chirish"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#EDEDED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#D5D5D5"
+                    android:text="Movien Name"
+                    android:textColor="#D5D5D5"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="47dp"
+                    android:background="#D5D5D5"
+                    android:text="Authors Movie"
+                    android:textColor="#D5D5D5"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D5D5D5"
+                    android:text="12.12.2022"
+                    android:textColor="#D5D5D5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="Tahrirlash"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="65dp"
+                    android:backgroundTint="#D5D5D5"
+                    android:text="O'chirish"
+                    android:textColor="#D5D5D5"
+                    app:cornerRadius="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
