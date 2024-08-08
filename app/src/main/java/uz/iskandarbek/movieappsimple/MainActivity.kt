@@ -33,13 +33,15 @@ class MainActivity : AppCompatActivity(), RvAdapter.RvAction {
         val list = MySharedPreference.list
         binding.shimmerLayout.startShimmer()
         binding.rv.visibility = View.GONE
-        handler.postDelayed(runnable, 3000)
+        handler.postDelayed(runnable, 2000)
         rvAdapter = RvAdapter(this, list)
         binding.rv.adapter = rvAdapter
     }
 
-    override fun itemClick(user: User) {
-        startActivity(Intent(this, ShowActivity::class.java))
+    override fun itemClick(user: User, position: Int) {
+        val intent = Intent(this, ShowActivity::class.java)
+        intent.putExtra("p", position)
+        startActivity(intent)
     }
 
     override fun editClick(user: User, position: Int) {
@@ -54,7 +56,7 @@ class MainActivity : AppCompatActivity(), RvAdapter.RvAction {
             binding.shimmerLayout.stopShimmer()
             binding.linear.visibility = View.GONE
             binding.rv.visibility = View.VISIBLE
-            handler.postDelayed(this, 3000)
+            handler.postDelayed(this, 2000)
         }
     }
 }

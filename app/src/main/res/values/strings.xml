@@ -2,4 +2,10 @@
     <string name="app_name">MovieAppSimple</string>
     <string name="kino_nomi">Kino nomi</string>
     <string name="kino_qo_shish">Kino qo\'shish</string>
+    <string name="kinolar">Kinolar</string>
+    <string name="kino">Kino</string>
+    <string name="movie_name">Movie name</string>
+    <string name="kino_nomis">Kino nomi:</string>
+    <string name="mualliflar">Mualliflar:</string>
+    <string name="sanasi">Sanasi:</string>
 </resources>

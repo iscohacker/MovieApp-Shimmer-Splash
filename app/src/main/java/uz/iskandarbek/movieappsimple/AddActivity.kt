@@ -42,12 +42,21 @@ class AddActivity : AppCompatActivity() {
         val list = MySharedPreference.list
         binding.apply {
             if (name.text.isNotBlank() && authors.text.isNotBlank() && about.text.isNotBlank() && data.text.isNotBlank()) {
-                val user = User(name.text.toString(), about.text.toString(), authors.text.toString(), data.text.toString())
+                val user = User(
+                    name.text.toString(),
+                    about.text.toString(),
+                    authors.text.toString(),
+                    data.text.toString()
+                )
                 list.add(user)
                 MySharedPreference.list = list
                 finish()
             } else {
-                Toast.makeText(this@AddActivity, "Ma'lumotlar to'liq kiritilmagan!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@AddActivity,
+                    "Ma'lumotlar to'liq kiritilmagan!",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
@@ -57,12 +66,21 @@ class AddActivity : AppCompatActivity() {
         val list = MySharedPreference.list
         binding.apply {
             if (name.text.isNotBlank() && authors.text.isNotBlank() && about.text.isNotBlank() && data.text.isNotBlank()) {
-                val user = User(name.text.toString(), about.text.toString(), authors.text.toString(), data.text.toString())
+                val user = User(
+                    name.text.toString(),
+                    about.text.toString(),
+                    authors.text.toString(),
+                    data.text.toString()
+                )
                 list[position] = user
                 MySharedPreference.list = list
                 finish()
             } else {
-                Toast.makeText(this@AddActivity, "Ma'lumotlar to'liq kiritilmagan!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@AddActivity,
+                    "Ma'lumotlar to'liq kiritilmagan!",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }

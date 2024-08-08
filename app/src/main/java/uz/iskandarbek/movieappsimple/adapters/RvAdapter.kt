@@ -17,7 +17,7 @@ class RvAdapter(var rvAction: RvAction, var list: ArrayList<User>) :
                 about.text = user.about
                 data.text = user.data
                 root.setOnClickListener {
-                    rvAction.itemClick(user)
+                    rvAction.itemClick(user, position)
                 }
                 delete.setOnClickListener {
                     notifyItemRemoved(position)
@@ -45,7 +45,7 @@ class RvAdapter(var rvAction: RvAction, var list: ArrayList<User>) :
     }
 
     interface RvAction {
-        fun itemClick(user: User)
+        fun itemClick(user: User, position: Int)
         fun editClick(user: User, position: Int)
     }
 }
